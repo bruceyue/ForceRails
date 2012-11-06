@@ -1,0 +1,18 @@
+<%= form_for(@account) do |f| %>
+
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone %><br />
+    <%= f.number_field :Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :BillingCity %><br />
+    <%= f.text_field :BillingCity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

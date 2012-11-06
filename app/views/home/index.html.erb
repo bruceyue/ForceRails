@@ -1,0 +1,47 @@
+<div id="loginBox" class="login">
+	<div id="lightbox" class="done">
+		<div id="lbContent" class="clearfix">
+			<div id="loginForm">
+				<div class="info">
+					<h2>SFDC & Rails, Write less, do more!</h2>
+					<div id="notices" style="font-color: red">
+						<% if flash[:error] %>
+							<div class="alert" style="display: block;">
+								<a data-dismiss="alert" href="#">×</a> <strong>Error!</strong>
+								<%= flash[:error] %>
+							</div>
+						<% end %>
+						<% if flash[:notice] %>
+						  <div><%= flash[:notice] %></div>
+						<% end %>
+					</div>
+				</div>
+				<br/><br/><br/>
+				<div class="login">
+					<%= form_tag('/auth/salesforce', :id => "login") do %>
+					      <button name="oauth" type="submit" id="oauth-button" class="button"  ><strong><span id="login-button-text">Login with Salesforce production</span></strong></button>
+					<% end %> <br/><br/><br/>
+					<%= form_tag('/auth/salesforcesandbox', :id => "login") do %>
+					      <button name="oauth" type="submit" id="oauth-button" class="button"  ><strong><span id="login-button-text">Login with Salesforce sandbox</span></strong></button>
+					<% end %>
+				</div>
+
+				<br /><br/><br/>
+
+				<a href="https://login.salesforce.com/secur/forgotpassword.jsp?locale=us" title="Don't worry, we'll get you a new one.">Forget your password?</a>
+				&middot;
+				<a href="http://wiki.developerforce.com/page/Wiki" title="Read our Login FAQ" target="_blank">Login FAQ</a>
+			</div>
+
+			<div id="noaccount">
+				<a href="http://www.developerforce.com/events/regular/registration.php" target="_blank">
+					<h2>
+						Don't have an account? <b>No worries.</b>
+						<span>Create one now.</span> <b>It's FREE!</b>
+					</h2>
+				</a>
+			</div>
+
+		</div>
+	</div>
+</div>

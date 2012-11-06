@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+body
+{
+    font-size:75%;
+    color:black;
+    font-family:'Arial','Helvetica',sans-serif;
+    background-image: url('bg_repeat.jpg');
+    /*background-image:-ms-linear-gradient(#E5F2F6,#CDE8F0);
+    background-image:-moz-linear-gradient(#E5F2F6,#CDE8F0);
+    background-image:-webkit-linear-gradient(#E5F2F6,#CDE8F0);
+    background-image:linear-gradient(#E5F2F6,#CDE8F0);*/
+    -moz-box-shadow:0px 3px 10px hsla(100,0%,0%,.3);
+    -webkit-box-shadow:0 0 5px 5px #888;
+    box-shadow: 0 0 5px 5px #888;
+    box-shadow:0px 3px 10px hsla(100,0%,0%,.3)
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius-topleft:10px;
+     border-top-left-radius:10px;
+    -moz-border-radius-topright:10px;
+    -webkit-border-radius-topright:10px;
+    -webkit-border-top-right-radius:10px;
+    border-top-right-radius:10px;
+}
+
+.newObjectLink{
+  margin :0 auto;
+  display: block;
+  text-align: center;
+}
+
+.footerClass{
+  margin :0 auto;
+  display: block;
+  text-align: center;
+  color: blue;
+}
+
+.pTable{
+  margin : 0 auto;
+  width: 92%
+}
+
+.pTable th{
+   border:1px solid #999;
+   border-spacing:0px;
+   padding-left :5px;
+   padding-right:5px;
+   border-right: none;
+   text-align:left;
+   font-weight:bold;
+   white-space:nowrap;
+   background: rgb(50, 199, 145);
+}
+
+.pTable td{
+   border:1px solid #999;
+   border-spacing:0px;
+   border-top: none;
+   padding-left: 5px;
+   padding-right:5px;
+   border-right: none;
+}
+
+.pTable td:last-child,.pTable th:last-child{
+   border-right:1px solid #999;
+ }
+
+.pTable tr:hover{
+  background-color: rgb(49, 148, 204);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family:'Verdana','Geneva',sans-serif;
+    font-size:100%;
+}
+
+.audioPlayer{
+  margin :0 auto;
+  width: 300px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.videoPlayer{
+  margin :0 auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#loggedinMenu {
+  position: relative;
+  margin-left: 30px;
+}
+
+#loggedinMenu a {
+  display: block;
+  width: 100px; !important;
+}
+
+#loggedinMenu ul {
+  list-style-type: none;
+  padding-top: 5px;
+}
+
+#loggedinMenu li {
+  float: left;
+  position: relative;
+  padding: 3px 0;
+  text-align: center;
+}
+
+#loggedinMenu ul.sub-loggedinMenu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  padding: 10px;
+  z-index: 90;
+}
+
+#loggedinMenu ul.sub-loggedinMenu li {
+  text-align: left;
+}
+
+#loggedinMenu li:hover ul.sub-loggedinMenu {
+  display: block;
+  border: 0px solid #ececec;
+}

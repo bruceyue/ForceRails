@@ -1,0 +1,28 @@
+<div style="height:70px;"></div>
+<h1 class="newObjectLink"><%= link_to 'New Account', new_account_path %></h1>
+<table class="pTable" cellspacing ="0" cellpadding ="0">
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Billingcity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%= account.Name %></td>
+    <td><%= account.Phone %></td>
+    <td><%= account.BillingCity %></td>
+    <td><%= link_to 'Show', account %></td>
+    <td><%= link_to 'Edit', edit_account_path(account) %></td>
+    <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h1 class="newObjectLink"><%= link_to 'New Account', new_account_path %></h1>
+

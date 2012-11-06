@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sfdc & Rails</title>
+  <%= stylesheet_link_tag    :application %>
+  <%= javascript_include_tag  :application %>
+  <%= csrf_meta_tags %>
+  <meta name="keywords" content="rails, html, apex, salesforce, visulforce, chatter, ruby" />
+</head>
+<body>
+  <div>
+    <div style="float:left;">
+      <%= image_tag("meginfo.png", :height => "40", :width => "120")%>
+    </div>
+    <div class="dock" id="dock">
+      <div class="dock-container">
+        <a class="dock-item" href="../home/index"><%= image_tag("home.png") %><span>Home</span></a>
+            <a class="dock-item" href="#"><%= image_tag("chatter.png") %><span>Chatter</span></a>
+            <a class="dock-item" href="../accounts"><%= image_tag("account.png") %><span>Accounts</span></a>
+            <a class="dock-item" href="#"><%= image_tag("contact.png") %><span>Contacts</span></a>
+            <a class="dock-item" href="#"><%= image_tag("lead.png") %><span>Leads</span></a>
+            <a class="dock-item" href="#"><%= image_tag("opportunity.png") %><span>Opportunities</span></a>
+            <a class="dock-item" href="#"><%= image_tag("product.png") %><span>Products</span></a>
+            <a class="dock-item" href="#"><%= image_tag("music.png") %><span>Music</span></a>
+            <a class="dock-item" href="../"><%= image_tag("video.png") %><span>Video</span></a>
+            <a class="dock-item" href="#"><%= image_tag("rss.png") %><span>RSS</span></a>
+      </div>
+      <div style="float:right;">
+        <% if logged_in? %>
+          <ul class="nav pull-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/aboutme">About Me</a>
+                  <a href="/logout">Sign Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  <%= yield %>
+  <div style="height:300px;"></div>
+  <h1 class="footerClass">
+    <footer>
+      <%= mail_to "bruce.yue@outlook.com" %>&nbsp; @CopyRight <%= Time.now.year%>
+    </footer>
+  </h1>
+  <script type="text/javascript">
+    $(document).ready(function()
+    {
+      $('#dock').Fisheye(
+        {
+          maxWidth: 50,
+          items: 'a.dock-item',
+          itemsText: 'span',
+          container: '.dock-container',
+          itemWidth: 50,
+          proximity: 10,
+          halign: 'center'
+        }
+      )
+    });
+  </script>
+</body>
+</html>
